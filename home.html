@@ -1,10 +1,97 @@
 {# NB: This file is a "jinja2 template", but can mostly be edited like HTML #}
 {% extends "base.html" %}
-{% block head %}{# {{ super() }} #}{% endblock %}
+{% block head %}{# {{ super() }} #}
+<style type="text/css">
+/* Comment this out until it's actually needed
+@font-face {
+  font-family: 'Source Code Pro';
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'),
+    url('/theme/source-code-pro/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/theme/source-code-pro/SourceCodePro-Regular.otf')  format('opentype'),
+    url('/theme/source-code-pro/SourceCodePro-Regular.woff') format('woff'),
+    url('/theme/source-code-pro/SourceCodePro-Regular.ttf')  format('truetype'),
+    url('/theme/source-code-pro/SourceCodePro-Regular.svg#SourceCodePro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
+@font-face {
+  font-family: 'Crimson Text';
+  src: local('Crimson Text'), local('CrimsonText-Roman'),
+       url('/theme/crimson/CrimsonText-Roman.eot?#iefix') format('embedded-opentype'),
+       url('/theme/crimson/CrimsonText-Roman.woff') format('woff'),
+       url('/theme/crimson/CrimsonText-Roman.ttf')  format('truetype'),
+       url('/theme/crimson/CrimsonText-Roman.svg#CrimsonText-Roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'), local('OpenSans'),
+    url('/theme/open-sans/OpenSans.eot?#iefix') format('embedded-opentype'),
+    url('/theme/open-sans/OpenSans.woff') format('woff'),
+    url('/theme/open-sans/OpenSans.ttf')  format('truetype'),
+    url('/theme/open-sans/OpenSans.svg#OpenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+    font-size: 16pt;
+    line-height: 125%;
+    font-family: "Crimson Text", serif;
+}
+.frame {
+    position: absolute;
+    left: 50%;
+    margin-top: 2em;
+    margin-left: -320px;
+    width: 640px;
+}
+.header h1 {
+    font-family: "Open Sans", "Helvetica", sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
+.header h1 img {
+    margin-bottom: -0.70em;
+}
+.links {
+    margin-top: 3em;
+    text-align: center;
+    font-family: "Open Sans", "Helvetica", sans-serif;
+}
+.links a {
+    text-decoration: none;
+}
+.textbody {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+</style>
+{% endblock %}
 {% block content %}
-<div style="position: absolute; left: 50%; top: 50%; margin-top: -100px; margin-left: -75px; text-align: center; font-family: courier; font-size: 16pt;">
-<img src="/static/images/rambutan_poor_200px.png" alt="rambutan photo" width="80"><br>
-<br>rambutan.cc
-<br><a style="text-decoration: none;" href="http://rambutan.cc">home</a><br><a style="text-decoration: none;" href="http://docs.rambutan.cc">docs</a><br><a style="text-decoration: none;" href="http://forums.rambutan.cc">forums</a><br><a style="text-decoration: none;" href="http://github.com/rambutan32">source</a
+<div class="frame">
+<div class="header">
+<h1>
+<img src="/static/images/rambutan_poor_200px.png" alt="rambutan photo" width="80">
+rambutan
+</h1>
+</div>
+
+<div class="links">
+<a href="http://rambutan.cc">home</a> | <a href="http://docs.rambutan.cc">documentation</a> | <a href="http://forums.rambutan.cc">forums</a> | <a href="http://github.com/rambutan32">source code</a>
+</div>
+
+<div class="textbody">
+lorem iplorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+lorem lm ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+lorem ipum lorem ipsum lorem ipsum lor em ipsum lorem ipsum lorem ipsum lorem ipsum
+lorem ipsum lorem ipsum lorem ipsum loipsum lorem ipsum lorem ipsum lorem ipsum
+</div>
+
 </div>
 {% endblock content %}
