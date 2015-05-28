@@ -9,3 +9,7 @@
 output
 uploads
 original.tar.gz
+cache
+
+# Don't ignore this file itself
+!.gitignore
